@@ -71,14 +71,14 @@
     function getContext() {
     }
 
+    
+
     async function getUserProfile() {
       const profile = await liff.getProfile()
-      if(profile){
-        alert('Profile')
-      }
-  
+      alert(profile.userId)
+
       document.getElementById("pictureUrl").src = profile.pictureUrl
-      document.getElementById("userId").append(profile.userId)
+      // document.getElementById("userId").append(profile.userId)
       document.getElementById("statusMessage").append(profile.statusMessage)
       document.getElementById("displayName").append(profile.displayName)  
     }
