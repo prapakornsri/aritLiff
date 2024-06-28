@@ -75,10 +75,8 @@
 
     async function getUserProfile() {
       const profile = await liff.getProfile()
-      alert(profile.displayName)
-
-      document.getElementById("pictureUrl").src = profile.pictureUrl
-      // document.getElementById("userId").append(profile.userId)
+      // document.getElementById("pictureUrl").src = profile.pictureUrl
+      document.getElementById("userId").append(profile.userId)
       document.getElementById("statusMessage").append(profile.statusMessage)
       document.getElementById("displayName").append(profile.displayName)  
     }
@@ -99,7 +97,6 @@
     }
 
     async function main() {
-      alert("LINE Developers x Skooldio")
       await liff.init({ liffId: "2005700990-Xx57Raxy" })
       getEnvironment()
       getUserProfile()
